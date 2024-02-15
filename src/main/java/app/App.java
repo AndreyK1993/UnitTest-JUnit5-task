@@ -12,11 +12,12 @@ public class App {
 
     private static String handleData() {
         DataProvider provider = new DataProvider();
-        AppValidator validator = new AppValidator();
         try {
-            return validator.validateTemperature(provider.getTemperature());
+            int temperature = provider.getTemperature();
+            AppValidator validator = new AppValidator();
+            return validator.validateTemperature(temperature);
         } catch (TemperatureException ex) {
-           return ex.getMessage();
+            return ex.getMessage();
         }
     }
 

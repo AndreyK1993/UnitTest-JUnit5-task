@@ -10,7 +10,7 @@ public class AppValidator {
     public String validateTemperature(int temperature)
             throws TemperatureException {
         if (temperature >= TEMPERATURE_LOWER_LIMIT
-                & temperature <= TEMPERATURE_UPPER_LIMIT) {
+                && temperature <= TEMPERATURE_UPPER_LIMIT) {
             return "Temperature is OK. Data can be obtained.";
         } else {
             throw new TemperatureException("Invalid temperature.");

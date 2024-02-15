@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class DataProvider {
 
     public int getTemperature() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter temperature from -10 to 35 degree: ");
-        return scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter temperature from -10 to 35 degree: ");
+            return scanner.nextInt();
+        }
     }
 }
